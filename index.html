@@ -485,7 +485,7 @@ transform:scale(1.07);
   width: 100vw;
   height: 100vh;
   pointer-events: none; /* so balloons are clickable through it */
-  z-index: 1000;       /* on top of everything */
+  z-index: -1;       /* on top of everything */
 }
 
 </style>
@@ -663,7 +663,8 @@ Favorite Memories 📸
 </section>
 
 
-<script>
+<script defer>
+document.addEventListener("DOMContentLoaded", function(){
 
 const lines = [
   "Initializing Birthday Protocol...",
@@ -807,7 +808,7 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 });
-
+});
 </script>
 
 </body>
